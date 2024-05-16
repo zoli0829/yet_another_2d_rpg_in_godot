@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://blf4ajxx372w7"]
+[gd_scene load_steps=32 format=3 uid="uid://blf4ajxx372w7"]
 
 [ext_resource type="Script" path="res://Player/Scripts/player.gd" id="1_kmy76"]
 [ext_resource type="Texture2D" uid="uid://6vwbssxkf6km" path="res://Player/Sprites/PlayerSprite02.png" id="2_lhcay"]
@@ -11,6 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://hxdgq6jrsp1i" path="res://Player/Audio/SwordSwoosh.wav" id="8_03rao"]
 [ext_resource type="Script" path="res://Player/Scripts/player_interactions_host.gd" id="10_ofs0w"]
 [ext_resource type="PackedScene" uid="uid://xqjg0b2lpagf" path="res://General Nodes/Hurtbox/hurt_box.tscn" id="10_x2osb"]
+[ext_resource type="Script" path="res://Player/Scripts/player_camera.gd" id="11_v3nnk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_r6mke"]
 
@@ -528,6 +529,8 @@ script = ExtResource("6_cy1k2")
 attack_sound = ExtResource("8_03rao")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+editor_draw_limits = true
+script = ExtResource("11_v3nnk")
 
 [node name="Audio" type="Node2D" parent="."]
 
